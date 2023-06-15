@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <script>
+        function f1(){ 
+                        let n1=document.getElementById("i1").value
+                        let n2=document.getElementById("i2").value
+                        let n3=document.getElementById("s1").value
+                       
+                        switch(n3){
+                            case "+": let add=parseInt(n1)+parseInt(n2)
+                                      document.getElementById("p1").innerText=`${n1}+${n2}=${add}`
+                                      break;
+                                  
+                            case "-": let sub=parseInt(n1)-parseInt(n2)
+                                      document.getElementById("p1").innerText=`${n1}-${n2}=${sub}`
+                                      break;
+                                    
+                            case "*": let mul=parseInt(n1)*parseInt(n2)
+                                      document.getElementById("p1").innerText=`${n1}*${n2}=${mul}`
+                                      break;
+                                 
+                            case "/": let div=parseInt(n1)/parseInt(n2)
+                                      document.getElementById("p1").innerText=`${n1}/${n2}=${div}`
+                                      break;
+
+
+                        }
+
+                        }
+
+
+    </script>
+</head>
+<body>
+    Num 1:<input type="number" value="0" id="i1">
+    Num 2:<input type="number" value="0" id="i2">
+    Choice:<select id="s1" onchange="f1()">
+        <option>select</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+
+    <p id="p1"></p>
+</body>
+</html>

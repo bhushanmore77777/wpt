@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+        function handler1()
+        {
+            let cb=document.getElementById("c1")
+            if(cb.checked)
+            {
+                document.getElementById("i1").readOnly=true
+            }
+            else{
+                document.getElementById("i1").readOnly=false
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="i1" />
+        
+        <label for="c1">Click to make</label><input type="checkbox" id="c1" onchange="handler1()"/>
+    </body>
+</html>
